@@ -1,0 +1,244 @@
+
+html, body {
+    margin: 0 0 5em 0;
+    padding: 0;
+    background-color:ghostwhite;
+}
+
+h2 {
+    background: wheat;
+    color: cornflowerblue;
+    font-weight: 100;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 1em 0;
+    margin-bottom: 0.5em;
+    position: center;
+    font-style:normal ;
+
+}
+
+h3 {
+    margin: 5px 0;
+    color: wheat;
+    font-size: 20px;
+    font-weight: 100;
+
+}
+h3:hover{
+    color: #bdd8ba;
+
+}
+.block {
+    display: flex;
+    position: center;
+
+
+}
+.block .block__item {
+    flex: 0 1 50%;
+    font-style: italic;
+    position: center;
+
+}
+.block .block__item .block__inner {
+    padding: 2em 3em;
+    position: center;
+
+}
+@media (max-width: 550px) {
+    .block .block__item .block__inner {
+        padding: 1em;
+    }
+}
+@media (max-width: 950px) {
+    .block .block__item {
+        flex: 0 1 100%;
+    }
+}
+.block .block__description {
+    line-height: 22px;
+}
+.block .block__description:first-letter {
+    float: left;
+    font-size: 55px;
+    line-height: 40px;
+    padding: 0 0.25em;
+}
+
+.list {
+    font-family: "Myriad Pro", sans-serif;
+    font-style: normal;
+    background-color: darkslateblue;
+    float: left;
+    padding: 1.5em 0;
+    margin-bottom: 3em;
+}
+.list .list__item {
+    float: left;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.list .list__item .list__time {
+    color: wheat;
+    width: 25%;
+    text-align: center;
+}
+.list .list__item .list__desc {
+    width: 60%;
+    border-bottom: 1px solid #484C56;
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 22px;
+    padding: 1em;
+    position: relative;
+}
+.list .list__item .list__desc .border {
+    background: wheat;
+    width: 3px;
+    position: absolute;
+    top: 0;
+    bottom: -1px;
+    left: -8%;
+}
+.list .list__item .list__desc .border:after {
+    content: "";
+    background:darkslateblue;
+    border: 5px solid wheat;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    margin-top: -9px;
+    left: -7px;
+    width: 8px;
+    height: 8px;
+}
+@media (max-width: 550px) {
+    .list .list__item .list__desc .border {
+        left: -5%;
+    }
+}
+.list .list__item:last-of-type .list__desc {
+    border-bottom: none;
+}
+.list .list__item:last-of-type .list__desc .border:before {
+    content: "";
+    background: wheat;
+    border-radius: 50%;
+    height: 9px;
+    width: 9px;
+    position: absolute;
+    bottom: -8px;
+    left: -3px;
+}
+.list .list__item:first-of-type .list__desc {
+    border-bottom: none;
+}
+.list .list__item:first-of-type .list__desc .border:before {
+    content: "";
+    background: wheat;
+    border-radius: 50%;
+    height: 9px;
+    width: 9px;
+    position: absolute;
+    top: -8px;
+    left: -3px;
+}
+
+
+
+.center {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+.popup {
+    width:555px;
+    height:360px;
+    padding:30px 20px;
+    background:#f5f5f5;
+    border-radius:10px;
+    box-sizing:border-box;
+    z-index:2;
+    text-align:center;
+    opacity:0;
+    top:-200%;
+    transform:translate(-50%,-50%) scale(0.5);
+    transition: opacity 300ms ease-in-out,
+    top 1000ms ease-in-out,
+    transform 1000ms ease-in-out;
+}
+.popup.active {
+    opacity:1;
+    top:50%;
+    transform:translate(-50%,-50%) scale(1);
+    transition: transform 300ms cubic-bezier(0.18,0.89,0.43,1.19);
+}
+.popup .icon {
+    margin:5px 0px;
+    width:50px;
+    height:50px;
+    border:3px solid #bdd8ba;
+    text-align:center;
+    display:inline-block;
+    border-radius:50%;
+    line-height:60px;
+}
+.popup .icon i.fa {
+    font-size:30px;
+    color:#bdd8ba;
+}
+.popup .title {
+    margin:5px 0px;
+    font-size:30px;
+    font-weight:600;
+}
+.popup .description {
+    color:#0b3253;
+    font-size:20px;
+    padding:2px;
+}
+.popup .dismiss-btn {
+    margin-top:15px;
+}
+.popup .dismiss-btn button {
+    padding:10px 20px;
+    background:#0b3253;
+    color:#f5f5f5;
+    border:2px solid #bdd8ba;
+    font-size:16px;
+    font-weight:600;
+    outline:none;
+    border-radius:10px;
+    cursor:pointer;
+    transition: all 300ms ease-in-out;
+}
+.popup .dismiss-btn button:hover {
+    color:#0b3253;
+    background:#f5f5f5;
+}
+.popup > div {
+    position:relative;
+    top:10px;
+    opacity:0;
+}
+.popup.active > div {
+    top:0px;
+    opacity:1;
+}
+.popup.active .icon {
+    transition: all 300ms ease-in-out 250ms;
+}
+.popup.active .title {
+    transition: all 300ms ease-in-out 300ms;
+}
+.popup.active .description {
+    transition: all 300ms ease-in-out 350ms;
+}
+.popup.active .dismiss-btn {
+    transition: all 300ms ease-in-out 400ms;
+}
+

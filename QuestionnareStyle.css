@@ -1,0 +1,156 @@
+
+div.demo {
+    margin: 5px;
+    padding: 5px;
+    position: relative;
+    width: 92%;
+    height: 300px;
+    overflow: auto;
+}
+
+/* button submit*/
+#submit{
+    color: black;
+    background-color: #0b3253;
+    border-radius:0px;
+}
+/*hover for button submit*/
+#submit:hover{
+    background:#a0cdb3;
+    color:#fff;
+    border-radius:0px;
+    box-shadow:5px 5px 5px #eee;
+    text-shadow:none;
+}
+.box {
+    position: center;
+    width: 100%;
+    max-width: 400px;
+}
+/* the New button*/
+.button {
+    position: absolute;
+    top: 70%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: chocolate;
+    color: white;
+    font-size: 14px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+/* the New button hover*/
+.button:hover {
+    background: orange;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 60%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #0b3253;
+}
+.popup .close:hover {
+    color: #a0cdb3;
+}
+.popup .content {
+    max-height: 30%;
+    overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+    .box{
+        width: 70%;
+    }
+    .popup{
+        width: 70%;
+    }
+}
+:root {
+    --trees-z1: hsl(20, 60%, 20%);
+    --trees-z2: hsl(20, 60%, 30%);
+    --trees-z3: hsl(20, 60%, 50%);
+    --trees-z4: hsl(20, 60%, 60%);
+    --rocket-1: #f00;
+    --rocket-2: #b00;
+    --hills: hsl(20, 60%, 40%);
+    --mountains: #f90;
+    --snow: #fa0;
+    --sky: #f60;
+    --sun: #f90;
+    --angle: -20deg;
+}
+svg {
+    width: 100vh;
+    height: 100vh;
+    margin: 0 auto;
+    position: absolute;
+    left: 26%;
+}
+svg *{
+    transition: all 2s;
+}
+svg:hover{
+    --trees-z1: #0b3253;
+    --trees-z2: #0c3b5b;
+    --trees-z3: #1e566b;
+    --trees-z4: #bcc7b0;
+    --rocket-1: #bfe2cd;
+    --rocket-2: #c5efd4;
+    --hills: #486a72;
+    --mountains: #bdd8ba;
+    --snow: #d2e8cf;
+    --sky: #a0cdb3;
+    --sun: #fff;
+    --angle: 20deg;
+}
+#sky {
+    transform-origin: 250px 450px;
+    transform: rotate(var(--angle));
+}
+.shadow {
+    opacity: 0.24;
+}
+
+body {
+    background: #0b3253;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+}

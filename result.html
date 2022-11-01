@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="forRout.css">
+    <meta charset="UTF-8">
+    <style>
+        @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
+    </style>
+</head>
+<body>
+<div class="block">
+    <div class="block__item">
+        <div class="block__inner">
+            <h2>Travel Itinerary</h2>
+            <div class="list">
+                <div class="list__item">
+                    <div class="list__border"></div>
+                    <div class="list__desc">
+                        <h3 id="open-popup-btn-1">
+                            Walking Tour
+                        </h3>
+                        <div>Donostia - San Sebasti?n Hop On - Hop Off Sightseeing Tour</div>
+                        <div class="border"></div>
+                    </div>
+                </div>
+
+                <div class="list__item">
+                    <div class="list__border"></div>
+                    <div class="list__desc">
+                        <h3 id="open-popup-btn-2">
+                            Restaurant
+                        </h3>
+                        <div>Martin Berasateguiwith</div>
+                        <div class="border"></div>
+                    </div>
+                </div>
+                <div class="list__item">
+                    <div class="list__border"></div>
+                    <div class="list__desc">
+                        <h3 id="open-popup-btn-3">
+                            Museum
+                        </h3>
+                        <div>San Telmo Museoawith</div>
+                        <div class="border"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup center" id="popup-1">
+        <div class="icon">
+            <i class="fa fa-check"></i>
+        </div>
+        <div class="title" style="font-size: 20px">
+            Information's:
+        </div>
+        <div class="description">
+            Duration: 2h <br>
+            Available languages: English, Spanish<br>
+            Call the number: +1 855 275 5071 <br>
+            Cancellation policy: For a full refund, cancel at least 24 hours in advance of the start date of the experience
+        </div>
+        <div class="dismiss-btn">
+            <button id="dismiss-popup-btn-1">
+                Dismiss
+            </button>
+        </div>
+    </div>
+</div>
+<div class="popup center" id="popup-2">
+    <div class="icon">
+        <i class="fa fa-check"></i>
+    </div>
+    <div class="title" style="font-size: 20px">
+        Information's:
+    </div>
+    <div class="description">
+        Call the number: +34 943 42 28 66<br>
+        Open hours: 07:30 AM - 11:30 PM<br>
+        Location: Elkano 7, 20004 San Sebastian - Donostia Spain<br>
+        CUISINES: Bar, Mediterranean, Spanish<br>
+        SPECIAL DIETS: Vegetarian Friendly<br>
+        MEALS: Lunch, Dinner, Brunch, Breakfast, Late Night
+    </div>
+    <div class="dismiss-btn">
+        <button id="dismiss-popup-btn-2">
+            Dismiss
+        </button>
+    </div>
+</div>
+
+<div class="popup center" id="popup-3">
+    <div class="icon">
+        <i class="fa fa-check"></i>
+    </div>
+    <div class="title" style="font-size: 20px">
+        Information's:
+    </div>
+    <div class="description">
+        Call the number: +943 48 15 61<br>
+        Open hours: From Tuesday to Sunday: 10am - 8pm.
+        <br>
+        Price: 75 € per group<br>
+        Groups: 25 people maximum<br>
+        Additional services:<br> 1-Free audio guides<br> 2-Basque, Spanish, English, French, Russian and German. <br>
+        3-Lockers.<br>
+        4-Lend of wheelchairs and walking frames.
+    </div>
+    <div class="dismiss-btn">
+        <button id="dismiss-popup-btn-3">
+            Dismiss
+        </button>
+    </div>
+</div>
+<script>
+    document.getElementById("open-popup-btn-1").addEventListener("click",function(){
+        document.getElementById("popup-1").classList.add("active");
+    });
+
+    document.getElementById("dismiss-popup-btn-1").addEventListener("click",function(){
+        document.getElementById("popup-1").classList.remove("active");
+    });
+
+    document.getElementById("open-popup-btn-2").addEventListener("click",function(){
+        document.getElementById("popup-2").classList.add("active");
+    });
+
+    document.getElementById("dismiss-popup-btn-2").addEventListener("click",function(){
+        document.getElementById("popup-2").classList.remove("active");
+    });
+     document.getElementById("open-popup-btn-3").addEventListener("click",function(){
+        document.getElementById("popup-3").classList.add("active");
+    });
+
+    document.getElementById("dismiss-popup-btn-3").addEventListener("click",function(){
+        document.getElementById("popup-3").classList.remove("active");
+    });
+</script>
+</body>
+</html>
